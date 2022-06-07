@@ -1,0 +1,1 @@
+# hidrate-spark-qi-charging
