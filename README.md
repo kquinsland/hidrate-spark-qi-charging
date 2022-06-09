@@ -76,6 +76,10 @@ However, this McMaster part ([91292A004](https://www.mcmaster.com/91292A004/)) i
   - Required. Required to clean up some solder joints on the wireless charge receiver and sensor puck PCB
 - [ ] clamp
   - Required. A vice or similar would also work; anything that can securely hold the 3d printed parts to the bottom of the sensor puck for a few hours while the glue sets up will work.
+
+https://user-images.githubusercontent.com/1808375/172755046-aff784c8-6ea4-4007-bc96-c282fa8b5f3c.mp4
+
+
 - [ ] bubble level
   - Optional. Use this to check for even/level alignment at a few points in assembly.
 - [ ] basic multimeter
@@ -183,3 +187,6 @@ I have included photos for _most_ steps but not all. If something isn't clear, o
 ## Finish
 
 You will absolutely need to re-calibrate your water bottle after doing this modification.
+
+
+
