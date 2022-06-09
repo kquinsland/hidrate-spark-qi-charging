@@ -23,6 +23,10 @@ If you had to make any modifications or have an idea on how to improve the proce
 
 ![working demo](./photos/it%20works.mp4)
 
+Try raw link?
+
+https://github.com/kquinsland/hidrate-spark-qi-charging/blob/main/photos/it%20works.mp4
+
 ## Prep
 
 Several of the steps below involve adhesives with limited setup/cure time.
