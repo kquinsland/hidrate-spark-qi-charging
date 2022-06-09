@@ -21,7 +21,10 @@ I have only tested this with the 620ml / 21oz version of the hidrate spark bottl
 If you have a different size bottle and mange to pull off this modification, please open a discussion to share!
 If you had to make any modifications or have an idea on how to improve the process, please open a PR!
 
+<!-- Needs to be done via GH web UI for embed to work.  -->
 ![working demo](./photos/it%20works.mp4)
+
+// TODO: still or photo of the assembled device with no wires but green LEDs
 
 ## Prep
 
@@ -171,7 +174,7 @@ I have included photos for _most_ steps but not all. If something isn't clear, o
 ![](./photos/assembly/assy13_midframe-wire.jpg)
 
 - [ ] next step
-![](./photos/assembly/assy14_midframe-wire-arangement)
+![](./photos/assembly/assy14_midframe-wire-arangement.jpg)
 
 - [ ] next step
 ![](./photos/assembly/assy15_wires-and-soldered.jpg)
