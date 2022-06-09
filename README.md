@@ -89,8 +89,8 @@ You might be able to get away with just hot glue but I have had poor results wit
 
 There are two parts:
 
-- The 'bottom': this is most of the mass / contains the Qi coil
-- The 'anchor': this is the smaller of the two parts.
+- The ['bottom' (`bottom-lid.step`)](cad/bottom-lid.step): this is most of the mass / contains the Qi coil
+- The ['anchor' (`anchor-bracket.step`)](cad/anchor-bracket.step): this is the smaller of the two parts.
 
 Tolerances are tight and the shapes/dimensions need to be as precise as possible so print as slow as you need to in order to achieve this.
 
@@ -102,7 +102,7 @@ Print with at least 3 perimeters as we need the additional mass for some mechani
 
 Ironing for the top surface for the 'bottom' is a very good idea. This resulted in a NOTICEABLE improvement in surface finish for a dimensionally critical area. This is optional for the 'anchor' part; I didn't bother.
 
-//TODO: get suggested print orientation / layout + settings screenshot
+![Suggested print layout and settings](./photos/print/print_settings.png)
 
 ## Assemble
 
