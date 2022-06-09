@@ -10,12 +10,18 @@
       - [Note on adhesives](#note-on-adhesives)
     - [Parts](#parts)
   - [Assemble](#assemble)
+    - [puck disassembly and cleaning](#puck-disassembly-and-cleaning)
+    - [WCRA assembly](#wcra-assembly)
   - [Finish](#finish)
 
 This document is concerned with the products in the HidrateSpark family that have a 3 inch / 7.6 cm diameter.
 There is a '32oz Stainless Steel' version of the bottle which does appear to have a larger diameter (3.8 inch / 9.6 cm) which likely means a different shape of sensor puck so the guide below likely won't work without some modifications.
 
 I have only tested this with the 620ml / 21oz version of the hidrate spark bottle as that's the bottle I have.
+If you have a different size bottle and mange to pull off this modification, please open a discussion to share!
+If you had to make any modifications or have an idea on how to improve the process, please open a PR!
+
+![working demo](./photos/it%20works.mp4)
 
 ## Prep
 
@@ -78,16 +84,98 @@ You might be able to get away with just hot glue but I have had poor results wit
 
 ### Parts
 
-Two 3d printed parts. Tolerances are tight and the shapes/dimensions need to be as precise as possible so print as slow as you need to in order to achieve this.
+There are two parts:
+
+- The 'bottom': this is most of the mass / contains the Qi coil
+- The 'anchor': this is the smaller of the two parts.
+
+Tolerances are tight and the shapes/dimensions need to be as precise as possible so print as slow as you need to in order to achieve this.
+
+Support material is optional but I opted for it; negligible additional time/material cost for some certainty.
 
 I had good results with my 'stock' prusa mk3s with .4mm nozzle using .15mm layer heights.
 
-Print with at least 3 perimeters
-Ironing is a very good idea. This resulted in a NOTICEABLE improvement in surface finish.
+Print with at least 3 perimeters as we need the additional mass for some mechanical strength around where the screw threads will go.
+
+Ironing for the top surface for the 'bottom' is a very good idea. This resulted in a NOTICEABLE improvement in surface finish for a dimensionally critical area. This is optional for the 'anchor' part; I didn't bother.
+
+//TODO: get suggested print orientation / layout + settings screenshot
 
 ## Assemble
 
-This is going to take a while to document :P
+This will happen in a few 'phases':
+
+- puck disassembly and cleaning
+- wireless charge receiver assembly (`WCRA`)
+- mechanically connecting the `WCRA` to the puck
+- electrically connecting the `WCRA` to the puck
+
+I have included photos for _most_ steps but not all. If something isn't clear, open a discussion thread to ask about it.
+
+### puck disassembly and cleaning
+
+**Note:** The puck is composed of three components:
+
+- The 'bottom': this is where you grip/twist the puck to remove it from the bottle. This is also one of the anchor points for the load cell.
+- The 'top': this is the everything after the silicon rubber section between the 'bottom' and the clear plastic where you can see the LEDs from. This includes the rest of the grey plastic above the light ring.
+- The 'midframe': this is internal. It supports the PCB and is the second anchor point for the load cell. The 'top' screws into this component.
+
+1. Remove the sensor puck from the bottle. Use a philips screw driver to remove the three screws from the top of the puck. Set these screws aside so you do not lose them!
+2. _Gently_ separate the 'top' of the puck from the 'bottom' Be mindful of the battery; there is a short cable plugged into the PCB on the 'midframe'. Unplug the battery and set the 'top` aside.
+3. Unplug the load cell from the PCB
+4. Unscrew the two small screws holding the PCB to the 'midframe' and set aside.
+5. Lift the PCB away from the midframe and set aside.
+6. Unscrew the two philips screws on the load cell. These screws hold the load cell to the 'bottom'. Set aside.
+7. Pull the 'midframe' up. Do this carefully as the silicone rubber from the 'bottom' is molded around the midframe. Set aside.
+8. Thoroughly clean the bottom of the puck. The cleaner this part of the puck is, the better chance that the glue will hold. I suggest the top rack / silverware drawer in the dishwasher for a cycle.
+
+### WCRA assembly
+
+- [ ] Use the m2 screws to push out the support material and form threads in the plastic.
+![Use the m2 screws to push out the support material](./photos/assembly/assy01_push-out-support-material.jpg)
+
+- [ ] Use a small blade or tweezers or similar to remove the additional flashing material.
+![material that screw threads pushed out](./photos/assembly/assy02_support-flash-to-remove.jpg)
+
+    Removed material:
+    ![removed material ](./photos/assembly/assy03_removed-support-material.jpg)
+
+- [ ] Drive the m2 screws through the 'anchor'. This will deform the plastic slightly. That's OK so long as the deformation is minor.
+![deforming the anchor](./photos/assembly/assy04_screw-into-plate.jpg)
+
+- [ ] next step
+![](./photos/assembly/assy05_plate-on-base-test.jpg)
+
+- [ ] next step
+![](./photos/assembly/assy06_component-prep.jpg)
+
+- [ ] next step
+![](./photos/assembly/assy07_pcb-glue-prep.jpg)
+
+- [ ] next step
+![](./photos/assembly/assy08_plate-to-puck-test-fit.jpg)
+
+- [ ] next step
+![](./photos/assembly/assy09_coil-graphite-ready.jpg)
+
+- [ ] next step
+![](./photos/assembly/assy10_assembled-voltage-test.jpg)
+
+- [ ] next step
+![](./photos/assembly/assy11_assembled-voltage-test_fail.jpg)
+
+- [ ] next step
+![](./photos/assembly/assy12_glueup.jpg)
+
+- [ ] next step
+![](./photos/assembly/assy13_midframe-wire.jpg)
+
+- [ ] next step
+![](./photos/assembly/assy14_midframe-wire-arangement)
+
+- [ ] next step
+![](./photos/assembly/assy15_wires-and-soldered.jpg)
+
 
 ## Finish
 
