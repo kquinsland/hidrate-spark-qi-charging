@@ -10,7 +10,7 @@ https://user-images.githubusercontent.com/1808375/172755046-aff784c8-6ea4-4007-b
 
 > **Warning**
 > 🚨 ⚠️
-> This process will make _permanent_ changes to your bottle and will absolutely void your warranty. Proceed at your own risk. Read the full document to get an idea of the extent of necessary modifications before continuing!
+> This process will make _permanent_ changes to your bottle and will absolutely void your warranty. Proceed at your own risk. Read the full document to get an idea of the extent of necessary modifications and then decide if you want to continue.
 
 - [HidrateSpark PRO Qi charging retrofit](#hidratespark-pro-qi-charging-retrofit)
   - [Prep](#prep)
@@ -29,6 +29,7 @@ https://user-images.githubusercontent.com/1808375/172755046-aff784c8-6ea4-4007-b
     - [wireless receiver prep](#wireless-receiver-prep)
     - [WCRA assembly](#wcra-assembly)
   - [Finish](#finish)
+  - [License](#license)
 
 This document is concerned with the products in the HidrateSpark family that have a 3 inch / 7.6 cm diameter.
 There is a '32oz Stainless Steel' version of the bottle which does appear to have a larger diameter (3.8 inch / 9.6 cm) which likely means a different sensor puck so the guide below likely won't work without some modifications.
@@ -36,8 +37,6 @@ There is a '32oz Stainless Steel' version of the bottle which does appear to hav
 I have only tested this with the 620ml / 21oz version of the hidrate spark bottle as that's the bottle I have.
 If you have a different size bottle and mange to pull off this modification, please open a [discussion](https://github.com/kquinsland/hidrate-spark-qi-charging/discussions) to share!
 If you had to make any modifications or have an idea on how to improve the process, please open a PR!
-
-
 
 ## Prep
 
@@ -51,6 +50,7 @@ If you had to make any modifications or have an idea on how to improve the proce
 - [ ] [micro qi charge coil](#micro-qi-charge-coil)
 - [ ] [AWG 30 or similar wire](#awg-30-or-similar-wire)
 - [ ] [4x m2x4mm screws](#4x-m2x4mm-screws)
+- [ ] [3d printed parts](#parts)
 
 #### micro qi charge coil
 
@@ -68,16 +68,16 @@ You will need at least 8 inches but longer lengths will make some assembly and t
 
 #### 4x m2x4mm screws
 
-The ones I used came from a "universal" kit. The CAD files assume a screw with these dimensions
+The ones I used came from a "universal" kit. The CAD files assume a screw with these dimensions:
 
 | measurement  | dimension (mm) |
 | ------------ | -------------- |
-| head width   | XX             |
-| head height  | xx             |
-| shaft width  | xx             |
-| total length | xx             |
+| head radius  | 1.8 mm         |
+| head height  | 1.95 mm        |
+| shaft radius | 1.5 `*`        |
+| total length | 5.7 mm         |
 
-//TODO - get dimensions from cad
+`*` - This is intentionally undersized so the screw threads have something to bite into.
 
 However, McMaster part ([91292A004](https://www.mcmaster.com/91292A004/)) is virtually identical so it should work.
 
@@ -86,24 +86,25 @@ However, McMaster part ([91292A004](https://www.mcmaster.com/91292A004/)) is vir
 - [ ] A driver for the m2 screws
   - Required.
 - [ ] Super glue
-  - **Optional** but highly recommended. See [note](#note-on-adhesives) below.
+  - **Optional** but [highly recommended](#note-on-adhesives).
 - [ ] Hot glue
   - Required.
-- [ ] 2mm drill bit
-  - Required. The diameter does not have to be super precise so long as you can make a hole through which two strands of [wire](#awg-30-or-similar-wire) can pass through
+- [ ] ~2mm drill bit
+  - Required. The diameter does not have to be super precise so long as you can make a hole through which two strands of [wire](#awg-30-or-similar-wire) can pass through. I think I used a ¹⁄₁₆ drill bit.
 - [ ] soldering iron + solder
-  - Required. Required to clean up some solder joints on the wireless charge receiver and sensor puck PCB
+  - Required. Required to clean up some solder joints on the Qi wireless charge receiver and sensor puck PCB.
 - [ ] clamp
   - Required. A vice or similar would also work; anything that can securely hold the 3d printed parts to the bottom of the sensor puck for a few hours while the glue sets up will work.
 - [ ] bubble level
   - Optional. Use this to check for even/level alignment at a few points in assembly.
 - [ ] basic multimeter
-  - optional but highly recommended for testing.
+  - Optional but highly recommended for testing.
 
 #### Note on adhesives
 
-> **Note**
-> You might be able to get away with just hot glue but I have had poor results with silicone rubber material like the material coating the outside of the sensor puck. Hotglue is _fine_ for everywhere else in this build but I don't think it's the right adhesive to secure the components to the water bottle.
+You might be able to get away with just hot glue but I have had poor results when using hotglue with silicone rubber material - like the material coating the outside of the sensor puck.
+Hotglue is _fine_ for everywhere else in this build but I don't think it's the right adhesive to secure the components to the water bottle.
+I use superglue for attaching the modification to the bottom of the sensor puck.
 
 ### Parts
 
@@ -114,6 +115,7 @@ There are two parts:
 
 > **Warning**
 > Tolerances are _tight_ and the shapes/dimensions need to be as precise as possible so print as slow as you need to in order to achieve this.
+> Parts were designed with a `.15mm` tolerance in mind. Print parts out on a printer that can meet or exceed this.
 
 In the suggested print orientation, the amount of support material is negligible. I opted for support material for the 4 screw recesses on the 'bottom' component. The additional time/material cost was insignificant and it resulted in a much 'cleaner' hole which is preferable as this design does not permit any error here; the screw recesses need to be 100% clear of material or the screws will not sit flush!
 
@@ -215,7 +217,7 @@ You're looking for as little solder and wire from the rear of the PCB:
 - [ ] Drive the m2 screws through the 'anchor'. This will deform the plastic slightly. That's OK so long as the deformation is minor.
 ![deforming the anchor](./photos/assembly/assy04_screw-into-plate.jpg)
 
-- [ ] Perform a test fit. Make sure that the 'anchor' component fits into the bottom of the sensor puck. It might wiggle 'up and down' by a few mm but should be flush with the bottom of the sensor puck and should not be able to rotate or move 'side to side'.
+- [ ] Perform a test fit. Make sure that the 'anchor' component fits into the bottom of the sensor puck. It might wiggle 'up and down' by a few mm but should be flush with the bottom of the sensor puck and should not be able to rotate or move 'side to side'. You may find a bubble level handy here to ensure that things are appropriately flush/level.
 ![test fit the anchor on the bottom of the sensor puck](./photos/assembly/assy05_plate-on-base-test.jpg)
 
 - [ ] Prep the Qi receiver assembly, the graphite backing pad and the 3d printed parts. In a moment, you will need to attach the graphite backing pad to the bottom of the 'anchor' component. Use the marked features to help you with alignment.
@@ -240,7 +242,7 @@ You're looking for as little solder and wire from the rear of the PCB:
     And just to be through, flip the WCRA over and confirm that you do NOT get a voltage out!
     ![inverted WCRA no DC](./photos/assembly/assy11_assembled-voltage-test_fail.jpg)
 
-- [ ] It's GLUE time! Assuming you're using permanent glue, this is the point of no return! Ensure that the mating surfaces on the bottom of the puck AND the WCRA are as clean as possible. Coat the surfaces of the WCRA and then the puck with super glue and then quickly press the two together. Align the WCRA with the puck as needed; it might shift by a few mm along one axis. Once you're happy with how aligned the two are, clamp together and allow at least a few hours for the glue to set up.
+- [ ] It's GLUE time! Assuming you're using permanent glue, this is the point of no return! Double check that the top of the assembled WCRA is level. Ensure that the mating surfaces on the bottom of the puck AND the WCRA are as clean as possible. Coat the surfaces of the WCRA and then the puck with super glue and then quickly press the two together. Align the WCRA with the puck as needed; it might shift by a few mm along one axis. Once you're happy with how aligned the two are, clamp together and allow at least a few hours for the glue to set up.
 ![WCRA and puck bottom glued up](./photos/assembly/assy12_glueup.jpg)
 
 - [ ] After the glue has setup, route the wire from the exterior of the base sensor puck and through the hole in the mid-frame.
@@ -249,7 +251,9 @@ You're looking for as little solder and wire from the rear of the PCB:
 - [ ] Use tweezers or similar to shape and route the wire as shown. The sensor puck rests on the three silicon washers around the plastic pegs so the wire must remain flat until it reaches the edge of the midframe where it can be directed up.
 ![carefully shape the DC wire feed](./photos/assembly/assy14_midframe-wire-arrangement.jpg)
 
-- [ ] During puck disassembly, you should have removed two screws that held the load-cell to the bottom of the puck. Re attach load-cell to the bottom of the puck with these screws. Carefully fold the silicone overmolding from the bottom puck over the lip on the midframe and then re-attach the PCB. Trim off any excess wire and then solder one wire to each of the two contact pads next to the push button as shown:
+- [ ] During puck disassembly, you should have removed two screws that held the load-cell to the bottom of the puck. Re attach load-cell to the bottom of the puck with these screws. Make sure that the two screws holding the load-cell to the bottom of the puck are well torqued down. Failure to do this may result in a bottle that does not 'stand up' straight and/or a sensor puck that gives inaccurate measurements
+
+- [ ] Carefully fold the silicone overmolding from the bottom puck over the lip on the midframe and then re-attach the PCB. Trim off any excess wire and then solder one wire to each of the two contact pads next to the push button as shown:
 ![dc wires routed and soldered](./photos/assembly/assy15_wires-and-soldered.jpg)
     > **Note**
     > It does not matter which wire goes to which contact pad as the PCB has the necessary diodes to sort this out.
@@ -257,8 +261,19 @@ You're looking for as little solder and wire from the rear of the PCB:
     > **Warning**
     > Use no more solder than is necessary. The [pogo pins](https://en.wikipedia.org/wiki/Pogo_pin) in the 'top' of the sensor puck are assuming a flat surface and excessive solder on these pads could result in the pins being forced out of alignment which might cause them to short out!
 
-- [ ] Do one final test: place the sensor puck with the WCRA on a Qi charge pad and either measure the voltage at the two soldered points and/or verify that the green LEDs come on. Assuming that ~5V is present and the green LEDs come on, re-attach the 'top' of the sensor puck.  Congrats on making it this far!
+- [ ] Do one final test: place the sensor puck with the WCRA on a Qi charge pad and either measure the voltage at the two soldered points and/or verify that the green LEDs come on. Assuming that ~5V is present and the green LEDs come on, re-attach the 'top' of the sensor puck. Congrats on making it this far!
 
 ## Finish
 
-You will absolutely need to re-calibrate your water bottle after doing this modification.
+- [ ] Use a bubble level to check the top of the sensor puck. You can adjust how level the puck top is by rotating the three screws by fractions of a turn. You can also adjust the screws holding various components of the sensor puck to the load-cell if needed.
+
+- [ ] You will absolutely need to re-calibrate your water bottle after doing this modification.
+
+- [ ] Share your modification results! If you happen to pull this off, [please let me](https://github.com/kquinsland/hidrate-spark-qi-charging/discussions) know how well it's working out!
+
+## License
+
+Unless otherwise explicitly mentioned, everything in this repo is licensed under [CC NCSA 4.0 license terms](https://creativecommons.org/licenses/by-nc-sa/4.0/) as explained in the [LICENSE.md](LICENSE.md) file. In short:
+
+- Modifications need to be attributed back to me / this repo. Your modifications must also be distributed under the CC NCSA 4.0 license terms.
+- No commercial use permitted
