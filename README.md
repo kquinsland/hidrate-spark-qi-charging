@@ -261,6 +261,9 @@ You're looking for as little solder and wire from the rear of the PCB:
     > **Warning**
     > Use no more solder than is necessary. The [pogo pins](https://en.wikipedia.org/wiki/Pogo_pin) in the 'top' of the sensor puck are assuming a flat surface and excessive solder on these pads could result in the pins being forced out of alignment which might cause them to short out!
 
+> **Warning**
+> If all was done correctly, the two small pins on the top of the puck can _also_ still be used for charging. 🚨🚨 **DO NOT USE USB CHARGING AND WIRELESS CHARGING AT THE SAME TIME!** 🚨🚨
+
 - [ ] Do one final test: place the sensor puck with the WCRA on a Qi charge pad and either measure the voltage at the two soldered points and/or verify that the green LEDs come on. Assuming that ~5V is present and the green LEDs come on, re-attach the 'top' of the sensor puck. Congrats on making it this far!
 
 ## Finish
@@ -271,8 +274,6 @@ You're looking for as little solder and wire from the rear of the PCB:
 
 - [ ] Share your modification results! If you happen to pull this off, [please let me](https://github.com/kquinsland/hidrate-spark-qi-charging/discussions) know how well it's working out!
 
-> **Warning**
-> If all was done correctly, the two small pins on the top of the puck can _also_ still be used for charging. 🚨🚨 **DO NOT USE USB CHARGING AND WIRELESS CHARGING AT THE SAME TIME!** 🚨🚨
 
 ## License
 
