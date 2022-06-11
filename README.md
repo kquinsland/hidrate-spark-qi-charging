@@ -10,7 +10,8 @@
       - [Note on adhesives](#note-on-adhesives)
     - [Parts](#parts)
   - [Assemble](#assemble)
-    - [puck disassembly and cleaning](#puck-disassembly-and-cleaning)
+    - [puck disassembly, drilling and cleaning](#puck-disassembly-drilling-and-cleaning)
+      - [drill location](#drill-location)
     - [wireless receiver prep](#wireless-receiver-prep)
     - [WCRA assembly](#wcra-assembly)
   - [Finish](#finish)
@@ -125,14 +126,16 @@ I went with PLA because that's what was in the printer from the last print.
 
 This will happen in a few 'phases':
 
-- puck disassembly and cleaning
+- puck disassembly, drilling and cleaning
+- wireless receiver prep
 - wireless charge receiver assembly (`WCRA`)
 - mechanically connecting the `WCRA` to the puck
 - electrically connecting the `WCRA` to the puck
 
-I have included photos for _most_ steps but not all. If something isn't clear, open a discussion thread to ask about it.
+> **Note**
+> I have included photos for _most_ steps but not all; sometimes my hands were full or a camera was not handy. Where possible, I've tried my best to 're-shoot' photos. Apologies in advance for any photos that are missing or look like they may be from an earlier prototype design. If something isn't clear, open a discussion thread to ask about it!
 
-### puck disassembly and cleaning
+### puck disassembly, drilling and cleaning
 
 The sensor puck is composed of three components:
 
@@ -141,18 +144,28 @@ The sensor puck is composed of three components:
 - The 'midframe': this is internal. It supports the PCB and is the second anchor point for the load cell. The 'top' screws into this component.
 
 > **Note**
-> The goal here is to break the sensor puck down into it's components. Drill a small hole through some of the components so wires can pass from the bottom exterior of the puck into the puck body. Then thoroughly clean the sensor puck bottom for ideal adhesive strength.
+> The goal here is to break the sensor puck down into it's components then drill a small hole through some of the components so wires can pass from the bottom exterior of the puck into the puck body. Last, thoroughly clean the sensor puck bottom for ideal adhesive strength.
 
 1. Remove the sensor puck from the bottle. Use a philips screw driver to remove the three screws from the top of the puck. Set these screws aside so you do not lose them!
-2. _Gently_ separate the 'top' of the puck from the 'bottom' Be mindful of the battery; there is a short cable plugged into the PCB on the 'midframe'. Unplug the battery and set the 'top` aside.
-3. Unplug the load cell from the PCB
+2. _Gently_ separate the 'top' of the puck from the 'bottom'. Be mindful of the battery; there is a short cable plugged into the PCB on the 'midframe'. Unplug the battery and set the 'top` aside.
+3. Unplug the load cell from the PCB.
 4. Unscrew the two small screws holding the PCB to the 'midframe' and set aside.
 5. Lift the PCB away from the midframe and set aside.
-6. Unscrew the two philips screws on the load cell. These screws hold the load cell to the 'bottom'. Set aside.
-7. Pull the 'midframe' up. Do this carefully as the silicone rubber from the 'bottom' is molded around the midframe. Set aside.
-8. Thoroughly clean the bottom of the puck. The cleaner this part of the puck is, the better chance that the glue will hold. I suggest the top rack / silverware drawer in the dishwasher for a cycle.
+6. Prepare the ~2mm drill bit. With the midframe attached to the bottom of the puck drill straight down through the midframe and the bottom of the pick at the [indicated location](#drill-location).
+7. Unscrew the two philips screws on the load cell. These screws hold the load cell to the 'bottom'. Set aside.
+8. Pull the 'midframe' up. Do this carefully as the silicone rubber from the 'bottom' is molded around the midframe. Set aside.
+9. Thoroughly clean the bottom of the puck. The cleaner this part of the puck is, the better chance that the glue will hold. I suggest the top rack / silverware drawer in the dishwasher for a cycle.
 
-//TODO: re-work the instructions to account for the drill step. Needs guidance on locating WHERE to drill. Drill from the midframe through to the bottom of the sensor puck.
+#### drill location
+
+> **Note**
+> This photo shows the midframe separate from the bottom of the puck. Keep them together when you do the drill. The **exact** location of the hole is not as important as the general area. Use the photograph for guidance - the hole should be drilled close to the `+` shaped feature as shown; if you're off my a few mm, everything will still work.
+
+![dc wire drill location](./photos/assembly/assy16_drill_location_annotated.jpg)
+
+From the bottom, it should look something like this:
+
+![dc wire drill location underside](./photos/assembly/assy17_drill_location_underside.jpg)
 
 ### wireless receiver prep
 
@@ -166,6 +179,7 @@ The sensor puck is composed of three components:
 - [ ] Do the same with your AWG 30 wire.
 
 //TODO: closeup photo of the PCB after i've cleaned it up and applied minimal possible solder.
+I have a photo of the 'stock' Qi coil and it shows "what you don't want". Still need to get a "here's what the clean PCB looks like" and a "here's what you do want" image
 
 ### WCRA assembly
 
@@ -213,15 +227,14 @@ The sensor puck is composed of three components:
 - [ ] It's GLUE time! Assuming you're using permanent glue, this is the point of no return! Ensure that the mating surfaces on the bottom of the puck AND the WCRA are as clean as possible. Coat the surfaces of the WCRA and then the puck with super glue and then quickly press the two together. Align the WCRA with the puck as needed; it might shift by a few mm along one axis. Once you're happy with how aligned the two are, clamp together and allow at least a few hours for the glue to set up.
 ![WCRA and puck bottom glued up](./photos/assembly/assy12_glueup.jpg)
 
-- [ ] next step
-![](./photos/assembly/assy13_midframe-wire.jpg)
+- [ ] After the glue has setup, route the wire from the exterior of the base sensor puck and through the hole in the mid-frame.
+![DC wire through the midframe](./photos/assembly/assy13_midframe-wire.jpg)
 
-- [ ] next step
-![](./photos/assembly/assy14_midframe-wire-arangement.jpg)
+- [ ] Use tweezers or similar to shape and route the wire as shown. The sensor puck rests on the three silicon washers around the plastic pegs so the wire must remain flat until it reaches the edge of the midframe where it can be directed up.
+![carefully shape the DC wire feed](./photos/assembly/assy14_midframe-wire-arangement.jpg)
 
 - [ ] next step
 ![](./photos/assembly/assy15_wires-and-soldered.jpg)
-
 
 ## Finish
 
