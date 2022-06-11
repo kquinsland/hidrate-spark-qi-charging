@@ -2,7 +2,7 @@
 
 Below you'll find (somewhat) comprehensive instructions and associated CAD files for modifying a HidrateSpark water bottle to charge with commodity Qi wireless coils instead of the proprietary and failure-prone USB cable.
 
-Background as to the how/why of this modification can be found in the [accompanying post](https://karlquinsland.com/TODO-GET-URL-HERE) on my personal site.
+Background as to the how/why of this modification can be found in the [accompanying post](https://karlquinsland.com/hidrate-spark-qi-retrofit) on my personal site.
 
 <!-- Github does have support for embedded media files but you have to upload via the web UI. After that's done, URL manually added. -->
 <!-- markdownlint-disable-file MD034 -->
@@ -173,7 +173,7 @@ The sensor puck is composed of three components:
 #### drill location
 
 > **Note**
-> This photo shows the midframe separate from the bottom of the puck. Keep them together when you do the drill. The **exact** location of the hole is not as important as the general area. Use the photograph for guidance - the hole should be drilled close to the `+` shaped feature as shown; if you're off my a few mm, everything will still work.
+> This photo shows the midframe separate from the bottom of the puck. Keep them together when you drill the hole! Use the photograph for guidance - the hole should be drilled close to the `+` shaped feature as shown; if you're off my a few mm, everything should still work.
 
 ![dc wire drill location](./photos/assembly/assy16_drill_location_annotated.jpg)
 
@@ -188,11 +188,11 @@ From the bottom, it should look something like this:
 
 - [ ] Test your coil before modifying it to ensure that it works!
 - [ ] De-solder the existing DC leads from the PCB if attached. Use a solder sucker or similar to remove all extra solder from the hole on the PCB. See example photo below for what a properly cleaned hole looks like.
-- [ ] de-solder the AC/Coil leads from the PCB as well. Use a solder sucker or similar to remove all extra solder from the hole on the PCB.
-- [ ] re-attach the AC/Coil wires to the PCB using the minimum possible amount of solder. You want to insert the wires in from the side of the PCB with all the components on it.Ideally, there would NOT be a big solder blob or similar on the back of the PCB.
+- [ ] De-solder the AC/Coil leads from the PCB as well. Use a solder sucker or similar to remove all extra solder from the hole on the PCB.
+- [ ] Re-attach the AC/Coil wires to the PCB using the minimum possible amount of solder. You want to insert the wires in from the side of the PCB with all the components on it.Ideally, there would NOT be a big solder blob or similar on the back of the PCB.
 - [ ] Do the same with your AWG 30 wire.
 
-Here are some _example_ photos from a Qi pcb that is in process of being prepared. You'll want to get as close as possible to the demonstrated effect but for all 4 wire attachment locations, not just the two pictured here.
+Here are some _example_ photos from a Qi PCB that is in process of being prepared. You'll want to get as close as possible to the demonstrated effect but for all 4 wire attachment locations, not just the two pictured here.
 
 A properly cleaned wire hole should look like this:
 ![qi pcb with example clean holes](photos/qi-pcb/prep01_pcbX.jpg)
@@ -271,9 +271,12 @@ You're looking for as little solder and wire from the rear of the PCB:
 
 - [ ] Share your modification results! If you happen to pull this off, [please let me](https://github.com/kquinsland/hidrate-spark-qi-charging/discussions) know how well it's working out!
 
+> **Warning**
+> If all was done correctly, the two small pins on the top of the puck can _also_ still be used for charging. 🚨🚨 **DO NOT USE USB CHARGING AND WIRELESS CHARGING AT THE SAME TIME!** 🚨🚨
+
 ## License
 
 Unless otherwise explicitly mentioned, everything in this repo is licensed under [CC NCSA 4.0 license terms](https://creativecommons.org/licenses/by-nc-sa/4.0/) as explained in the [LICENSE.md](LICENSE.md) file. In short:
 
 - Modifications need to be attributed back to me / this repo. Your modifications must also be distributed under the CC NCSA 4.0 license terms.
-- No commercial use permitted
+- No commercial use permitted.
