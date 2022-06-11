@@ -1,5 +1,17 @@
 # HidrateSpark PRO Qi charging retrofit
 
+Below you'll find (somewhat) comprehensive instructions and associated CAD files for modifying a HidrateSpark water bottle to charge with commodity Qi wireless coils instead of the proprietary and failure-prone USB cable.
+
+Background as to the how/why of this modification can be found in the [accompanying post](https://karlquinsland.com/TODO-GET-URL-HERE) on my personal site.
+
+<!-- Github does have support for embedded media files but you have to upload via the web UI. After that's done, URL manually added. -->
+<!-- markdownlint-disable-file MD034 -->
+https://user-images.githubusercontent.com/1808375/172755046-aff784c8-6ea4-4007-bc96-c282fa8b5f3c.mp4
+
+> **Warning**
+> 🚨 ⚠️
+> This process will make _permanent_ changes to your bottle and will absolutely void your warranty. Proceed at your own risk. Read the full document to get an idea of the extent of necessary modifications before continuing!
+
 - [HidrateSpark PRO Qi charging retrofit](#hidratespark-pro-qi-charging-retrofit)
   - [Prep](#prep)
     - [BOM](#bom)
@@ -10,23 +22,22 @@
       - [Note on adhesives](#note-on-adhesives)
     - [Parts](#parts)
   - [Assemble](#assemble)
-    - [puck disassembly, drilling and cleaning](#puck-disassembly-drilling-and-cleaning)
+    - [sensor puck](#sensor-puck)
+      - [puck components](#puck-components)
+      - [puck disassembly, drilling and cleaning](#puck-disassembly-drilling-and-cleaning)
       - [drill location](#drill-location)
     - [wireless receiver prep](#wireless-receiver-prep)
     - [WCRA assembly](#wcra-assembly)
   - [Finish](#finish)
 
 This document is concerned with the products in the HidrateSpark family that have a 3 inch / 7.6 cm diameter.
-There is a '32oz Stainless Steel' version of the bottle which does appear to have a larger diameter (3.8 inch / 9.6 cm) which likely means a different shape of sensor puck so the guide below likely won't work without some modifications.
+There is a '32oz Stainless Steel' version of the bottle which does appear to have a larger diameter (3.8 inch / 9.6 cm) which likely means a different sensor puck so the guide below likely won't work without some modifications.
 
 I have only tested this with the 620ml / 21oz version of the hidrate spark bottle as that's the bottle I have.
-If you have a different size bottle and mange to pull off this modification, please open a discussion to share!
+If you have a different size bottle and mange to pull off this modification, please open a [discussion](https://github.com/kquinsland/hidrate-spark-qi-charging/discussions) to share!
 If you had to make any modifications or have an idea on how to improve the process, please open a PR!
 
-// TODO: still or photo of the assembled device with no wires but green LEDs
 
-<!-- markdownlint-disable-file MD034 -->
-https://user-images.githubusercontent.com/1808375/172755046-aff784c8-6ea4-4007-bc96-c282fa8b5f3c.mp4
 
 ## Prep
 
@@ -35,20 +46,15 @@ https://user-images.githubusercontent.com/1808375/172755046-aff784c8-6ea4-4007-b
 > **Warning**
 > Several of the steps below involve adhesives with limited setup/cure time. Take the time to prepare your work piece and have the necessary tools ready.
 
-<!-- markdownlint-disable-next-line MD028 -->
-> **Note**
-> Read the full document before starting to get an idea of the process.
-
 ### BOM
 
-- [ ] [micro qi charge coil](https://www.aliexpress.com/item/3256802090851265.html)
-- [ ] AWG 30 or similar wire
-- [ ] 4x m2x4mm screws
+- [ ] [micro qi charge coil](#micro-qi-charge-coil)
+- [ ] [AWG 30 or similar wire](#awg-30-or-similar-wire)
+- [ ] [4x m2x4mm screws](#4x-m2x4mm-screws)
 
 #### micro qi charge coil
 
-Depending on which site you search, you can find many many different Qi compatible wireless chargers.
-It took me a while to find a supplier for incredibly small.
+I sourced the coil used in this project from this Ali Express listing: [VEEAII DIY Qi Standard Wireless Charging Coil Receiver Module Circuit Board DIY Wireless Charging Coil for iPhone Samsung](https://www.aliexpress.com/item/3256802090851265.html)
 
 Specifically the `Yellow` version with the 14mm² PCB, not the 10.5mm² pcb.
 The smaller PCB was not in stock when I was beginning to source parts but it should work with this design.
@@ -64,12 +70,12 @@ You will need at least 8 inches but longer lengths will make some assembly and t
 
 The ones I used came from a "universal" kit. The CAD files assume a screw with these dimensions
 
-| measurement  | dimenstion (mm) |
-| ------------ | --------------- |
-| head width   | XX              |
-| head height  | xx              |
-| shaft width  | xx              |
-| total length | xx              |
+| measurement  | dimension (mm) |
+| ------------ | -------------- |
+| head width   | XX             |
+| head height  | xx             |
+| shaft width  | xx             |
+| total length | xx             |
 
 //TODO - get dimensions from cad
 
@@ -135,13 +141,19 @@ This will happen in a few 'phases':
 > **Note**
 > I have included photos for _most_ steps but not all; sometimes my hands were full or a camera was not handy. Where possible, I've tried my best to 're-shoot' photos. Apologies in advance for any photos that are missing or look like they may be from an earlier prototype design. If something isn't clear, open a discussion thread to ask about it!
 
-### puck disassembly, drilling and cleaning
+### sensor puck
+
+#### puck components
 
 The sensor puck is composed of three components:
 
 - The 'bottom': this is where you grip/twist the puck to remove it from the bottle. This is also one of the anchor points for the load cell.
 - The 'top': this is the everything after the silicon rubber section between the 'bottom' and the clear plastic where you can see the LEDs from. This includes the rest of the grey plastic above the light ring.
 - The 'midframe': this is internal. It supports the PCB and is the second anchor point for the load cell. The 'top' screws into this component.
+
+![puck components](photos/assembly/assy18_sensor_puck_components_annotated.jpg)
+
+#### puck disassembly, drilling and cleaning
 
 > **Note**
 > The goal here is to break the sensor puck down into it's components then drill a small hole through some of the components so wires can pass from the bottom exterior of the puck into the puck body. Last, thoroughly clean the sensor puck bottom for ideal adhesive strength.
@@ -172,14 +184,19 @@ From the bottom, it should look something like this:
 > **Note**
 > The goal here is to make sure that the receiver works and that the wires go 'into' the PCB from the side with the components on it ('top'). Any wire or solder blobs protruding from the rear of the PCB should be **as small as possible** and absolutely should not extend beyond the PCB by more than ~1mm!
 
-- [ ] test your coil before modifying it to ensure that it works!
-- [ ] de-solder the existing DC leads from the PCB if attached. Use a solder sucker or similar to remove all extra solder from the hole on the PCB
+- [ ] Test your coil before modifying it to ensure that it works!
+- [ ] De-solder the existing DC leads from the PCB if attached. Use a solder sucker or similar to remove all extra solder from the hole on the PCB. See example photo below for what a properly cleaned hole looks like.
 - [ ] de-solder the AC/Coil leads from the PCB as well. Use a solder sucker or similar to remove all extra solder from the hole on the PCB.
 - [ ] re-attach the AC/Coil wires to the PCB using the minimum possible amount of solder. You want to insert the wires in from the side of the PCB with all the components on it.Ideally, there would NOT be a big solder blob or similar on the back of the PCB.
 - [ ] Do the same with your AWG 30 wire.
 
-//TODO: closeup photo of the PCB after i've cleaned it up and applied minimal possible solder.
-I have a photo of the 'stock' Qi coil and it shows "what you don't want". Still need to get a "here's what the clean PCB looks like" and a "here's what you do want" image
+Here are some _example_ photos from a Qi pcb that is in process of being prepared. You'll want to get as close as possible to the demonstrated effect but for all 4 wire attachment locations, not just the two pictured here.
+
+A properly cleaned wire hole should look like this:
+![qi pcb with example clean holes](photos/qi-pcb/prep01_pcbX.jpg)
+
+You're looking for as little solder and wire from the rear of the PCB:
+![qi pcb with minimal wire and solder from the rear](photos/qi-pcb/prep02_pcbX.jpg)
 
 ### WCRA assembly
 
@@ -201,7 +218,7 @@ I have a photo of the 'stock' Qi coil and it shows "what you don't want". Still 
 - [ ] Perform a test fit. Make sure that the 'anchor' component fits into the bottom of the sensor puck. It might wiggle 'up and down' by a few mm but should be flush with the bottom of the sensor puck and should not be able to rotate or move 'side to side'.
 ![test fit the anchor on the bottom of the sensor puck](./photos/assembly/assy05_plate-on-base-test.jpg)
 
-- [ ] Prep the Qi receiver assembly, the graphite backing pad and the 3d printed parts
+- [ ] Prep the Qi receiver assembly, the graphite backing pad and the 3d printed parts. In a moment, you will need to attach the graphite backing pad to the bottom of the 'anchor' component. Use the marked features to help you with alignment.
 ![qi part prep](./photos/assembly/assy06_component-prep.jpg)
 
 - [ ] Use a **small** dot of hot glue to secure the PCB to the 'anchor' component. Let the hot glue gun get fully up to temperature for best results. The plastic will immediately start to 'drain' heat from the glue which will cause it to harden. We do not want the glue to harden until after the PCB has been aligned and can be **firmly** pressed down onto the 'anchor'.
@@ -209,12 +226,11 @@ I have a photo of the 'stock' Qi coil and it shows "what you don't want". Still 
 
 - [ ] Thread the DC wires through the bottom of the sensor puck and align the 'anchor' component with the bottom of the sensor puck.
     > **Note**
-    > Notice how the PCB is flush with the 'anchor' component
+    > Notice how the PCB is flush with the 'anchor' component. Use isopropyl alcohol to undo the hotglue if you need to re-attempt this.
 
     ![pcb properly secured to anchor](./photos/assembly/assy08_plate-to-puck-test-fit.jpg)
 
-- [ ] remove the protective plastic film from the graphite backing pad and then affix to the bottom of the 'anchor' component. Use the three small rectangle features to help you align the pad
-  - [ ] TODO: get a photo of this; edit it to explicitly call out the 3 alignment features
+- [ ] Remove the protective plastic film from the graphite backing pad and then affix to the bottom of the 'anchor' component. Use the three small rectangle shaped features to help you align the pad. The edge of the graphite pad should just barely touch the three interior facing edges of the alignment features. **Warning:** If the graphite pad is more than a little mis-aligned, the 'bottom' component may not screw into the 'anchor' component entirely. This _will_ make the rest of process much harder to pull off.
 
 - [ ] **Carefully** insert the Qi coil into the bottom component. Make sure the wires leave through the small channel. If you're careful, you probably won't need any hotglue to hold the coil in. If you do use hotglue make sure it is spread as thinly as possible; there is _no_ room in this design for the coil to not be flat! Combine the two parts and screw together.
 ![prepare to sandwich the coil and graphite](./photos/assembly/assy09_coil-graphite-ready.jpg)
@@ -231,10 +247,17 @@ I have a photo of the 'stock' Qi coil and it shows "what you don't want". Still 
 ![DC wire through the midframe](./photos/assembly/assy13_midframe-wire.jpg)
 
 - [ ] Use tweezers or similar to shape and route the wire as shown. The sensor puck rests on the three silicon washers around the plastic pegs so the wire must remain flat until it reaches the edge of the midframe where it can be directed up.
-![carefully shape the DC wire feed](./photos/assembly/assy14_midframe-wire-arangement.jpg)
+![carefully shape the DC wire feed](./photos/assembly/assy14_midframe-wire-arrangement.jpg)
 
-- [ ] next step
-![](./photos/assembly/assy15_wires-and-soldered.jpg)
+- [ ] During puck disassembly, you should have removed two screws that held the load-cell to the bottom of the puck. Re attach load-cell to the bottom of the puck with these screws. Carefully fold the silicone overmolding from the bottom puck over the lip on the midframe and then re-attach the PCB. Trim off any excess wire and then solder one wire to each of the two contact pads next to the push button as shown:
+![dc wires routed and soldered](./photos/assembly/assy15_wires-and-soldered.jpg)
+    > **Note**
+    > It does not matter which wire goes to which contact pad as the PCB has the necessary diodes to sort this out.
+    <!-- markdownlint-disable-next-line MD028 -->
+    > **Warning**
+    > Use no more solder than is necessary. The [pogo pins](https://en.wikipedia.org/wiki/Pogo_pin) in the 'top' of the sensor puck are assuming a flat surface and excessive solder on these pads could result in the pins being forced out of alignment which might cause them to short out!
+
+- [ ] Do one final test: place the sensor puck with the WCRA on a Qi charge pad and either measure the voltage at the two soldered points and/or verify that the green LEDs come on. Assuming that ~5V is present and the green LEDs come on, re-attach the 'top' of the sensor puck.  Congrats on making it this far!
 
 ## Finish
 
